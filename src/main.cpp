@@ -3,6 +3,7 @@
 #include <lab1.hpp>
 #include <lab2.hpp>
 #include <lab3.hpp>
+#include <lab4.hpp>
 
 int main(int argc, char **argv) {
 	gameai::gecode::lab1 l1;
@@ -22,6 +23,13 @@ int main(int argc, char **argv) {
 	gameai::gecode::lab3 l3;
 	Gecode::DFS<decltype(l3)> e3(&l3);
 	while(decltype(l3) *s = e3.next()) {
+		s->print(std::cout);
+		delete s;
+	}
+
+	gameai::gecode::lab4 l4;
+	Gecode::DFS<decltype(l4)> e4(&l4);
+	while(decltype(l4) *s = e4.next()) {
 		s->print(std::cout);
 		delete s;
 	}
