@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include <gecode/driver.hh>
+#include <gecode/minimodel.hh>
 
 namespace gameai {
 	namespace gecode {
@@ -9,7 +9,7 @@ namespace gameai {
 			Gecode::IntVar x;
 		public:
 			lab1() : x(*this, 0, 4) {
-				Gecode::rel(*this, x, Gecode::IRT_EQ, 2);
+				Gecode::rel(*this, x == 2);
 			}
 
 			lab1(const bool share, lab1 &s) : Gecode::Space(share, s) {
