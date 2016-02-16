@@ -16,7 +16,7 @@ namespace gameai {
 				x.update(*this, share, s.x);
 			}
 
-			virtual Gecode::Space * copy (const bool share) {
+			Gecode::Space * copy (const bool share) {
 				return new lab1(share, *this);
 			}
 
