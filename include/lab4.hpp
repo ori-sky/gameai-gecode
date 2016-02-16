@@ -25,7 +25,9 @@ namespace gameai {
 			}
 
 			std::ostream & print(std::ostream &os) {
-				return os << "lab4 { xy = " << xy << " }" << std::endl;
+				return os << "lab4 { xy = {" << std::setw(3) << xy[0] << ", "
+				                             << std::setw(3) << xy[1] << "} }"
+				                             << std::endl;
 			}
 		};
 	}
