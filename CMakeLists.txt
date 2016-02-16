@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.6)
+project(gameai-gecode)
+include_directories(include)
+add_executable(gameai-gecode src/main.cpp)
+target_link_libraries(gameai-gecode gecodesupport gecodekernel gecodedriver gecodeint)
