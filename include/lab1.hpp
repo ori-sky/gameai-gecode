@@ -20,8 +20,8 @@ namespace gameai {
 				return new lab1(share, *this);
 			}
 
-			std::ostream & operator<<(std::ostream &os) {
-				return os << "x=" << x << std::endl;
+			std::ostream & print(std::ostream &os) {
+				return os << "lab1 { x = " << x << " }" << std::endl;
 			}
 		};
 	}
