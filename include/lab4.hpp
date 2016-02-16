@@ -9,9 +9,9 @@ namespace gameai {
 			const int count = 2;
 			Gecode::IntVarArray xy;
 		public:
-			lab4() : xy(*this, count, -5, 4) {
+			lab4() : xy(*this, count, -30, 30) {
 				Gecode::IntVar x(xy[0]), y(xy[1]);
-				Gecode::rel(*this, x + 2 * y == 0);
+				Gecode::rel(*this, x * x + y * y == 5 * 5);
 				Gecode::branch(*this, xy, Gecode::INT_VAR_SIZE_MIN(),
 				                          Gecode::INT_VAL_MIN());
 			}
